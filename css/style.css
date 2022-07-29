@@ -1,0 +1,168 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #646669;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #646669;
+  border-radius: 2px !important;
+  -webkit-transition: 0.125s;
+  transition: 0.125s;
+}
+
+::-webkit-scrollbar-track {
+  background: 0 0;
+}
+
+@-webkit-keyframes blendIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes blendIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@-webkit-keyframes slideInFromTop {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+body {
+  background: #323437;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-animation: 2s ease-out 0s 1 blendIn;
+          animation: 2s ease-out 0s 1 blendIn;
+  margin: 0 2rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: #e2b714;
+  color: #323437;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  height: 2rem;
+  border-radius: 6px;
+  transition: 0.6s;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #323437;
+  border: solid #646669 1px;
+  color: #e2b714;
+}
+
+button:active {
+  margin-left: 1px 1px 0;
+  box-shadow: -1px -1px 1px #323437;
+  outline: 1px solid #323437;
+  -moz-outline-radius: 7px;
+  color: #323437;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper .infoText {
+  font-size: 0.6rem;
+  color: #f5b3c0;
+  display: none;
+}
+.wrapper .pending {
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.wrapper .error {
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
+}
+.wrapper .content-input {
+  margin-top: 1rem;
+}
+.wrapper .content-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 1rem 0;
+  background: #646669;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .content-input .separator::before {
+  content: "or";
+  color: #646669;
+  font-size: 1rem;
+  padding: 0 1rem;
+  background: #323437;
+}
+.wrapper .content-input input {
+  border-radius: 6px;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  padding: 0 0.5rem;
+  background-color: #d1d0c5;
+  outline: none;
+}
+.wrapper .content-weather {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 16px;
+  background-image: linear-gradient(to right, #e2b714, #ffe68a);
+}
+.wrapper .content-weather p {
+  color: #323437;
+  margin: 0.8rem;
+}
+.wrapper .content-weather .weatherLocation {
+  font-size: 1.5rem;
+}
+.wrapper .content-weather .weatherCelsius {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.wrapper .content-weather .weatherType {
+  font-size: 1rem;
+}
+.wrapper .content-weather .dayInWeek {
+  font-size: 0.8rem;
+}

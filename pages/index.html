@@ -1,0 +1,34 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="icon" type="image/x-icon" href="../images/favicon.svg" />
+		<script defer src="../js/script.js"></script>
+		<title id="Title">Weather App</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<p class="infoText" id="info-txt"></p>
+			<div class="content-input">
+				<input
+					id="searchField"
+					type="text"
+					spellcheck="false"
+					placeholder="Enter city name"
+					required
+				/>
+				<div class="separator"></div>
+				<button id="searchButton" type="button">Get Device Location</button>
+			</div>
+			<div class="content-weather" id="content_weather">
+				<p class="weatherLocation" id="location"></p>
+				<p class="weatherCelsius" id="weather"></p>
+				<img class="weatherIcon" id="weather_icon" />
+				<p class="weatherType" id="weather_type"></p>
+				<p class="dayInWeek" id="day_in_week"></p>
+			</div>
+		</div>
+	</body>
+</html>
